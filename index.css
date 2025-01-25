@@ -548,6 +548,7 @@ nav {
     padding: 0 20px;
     border: 1px solid #fff;
     border-radius: 70px;
+    flex-wrap: wrap;
 }
 
 .team-cards {
@@ -610,7 +611,7 @@ nav {
 
 .questions-subcontainer {
     margin-top: 40px;
-    height: 150px;
+    height: 60px;
     border: 1px solid gray;
     width: 60vw;
     border-radius: 20px;
@@ -627,6 +628,7 @@ nav {
 
 .questions-subcontainer p {
     font-size: 20px;
+    display: none;
 }
 
 .questions-container h3 p {
@@ -640,6 +642,7 @@ nav {
     color: #fff;
     padding-top: 10px;
     padding-right: 20px;
+    margin-top: 6px;
 }
 
 .intro i {
@@ -647,54 +650,6 @@ nav {
     padding: 5px;
 }
 
-.question {
-    margin-top: 30px;
-    width: 60vw;
-    height: 50px;
-    border: 1px solid gray;
-    border-radius: 15px;
-    padding: 0 10px;
-}
-
-.question h3 {
-    font-size: 30px;
-    font-weight: normal;
-}
-
-.subQues1,
-.subQues2,
-.subQues3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.question i {
-    cursor: pointer;
-    height: 22px;
-    width: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #fff;
-}
-
-.content-1,
-.content-2,
-.content-3 {
-    position: relative;
-    right: 10px;
-    margin-top: 20px;
-    display: none;
-    height: 60px;
-    padding-left: 20px;
-    width: 60vw;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    background-color: #062743;
-    
-}
 
 .last-section {
     height: 500px;
@@ -725,6 +680,17 @@ nav {
 
 .sub-section p {
     font-size: 25px;
+}
+
+.last-section button {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: 2px solid #00DDFF;
+    background-color: #000;
+    color: #fff;
 }
 
 footer {
@@ -861,4 +827,69 @@ hr {
     text-align: center;
     font-size: 20px;
     padding-bottom: 8px;
+}
+
+@media only screen and (max-width: 1600px) {
+    html {
+        overflow-x: hidden;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .website-container h2 {
+        font-size: 35px;
+    }
+    .website-container {
+        height: auto;
+    }
+    .website-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sub-section {
+        margin: 50px 0;
+        
+    }
+    
+    .main-info{
+        width: 100vw;
+    }
+    
+    .responsive-card-vanish {
+        display: none;
+    }
+
+    .services-cards-cont {
+        justify-content: center;
+    }
+
+    .card h3, .card p {
+        word-wrap: break-word;
+    }
+
+    .analysis-container h3 {
+        margin-top: 20px;
+        font-size: 40px;
+    }
+
+    .team-info,
+    .meetOurTeam {
+        height: auto;
+    }
+
+    .meetOurTeam h2, .meetOurTeam h2 p {
+        margin: 50px 0;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .team-info {
+        margin-top: 0;
+        
+    }
 }

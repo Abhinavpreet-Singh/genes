@@ -1,43 +1,26 @@
-const navbar = document.querySelector('nav');
-
-const dismissible = document.querySelector('.fa-minus');
-const dismissibleContainer = document.querySelector(".questions-subcontainer p");
-
-dismissible.onclick = () => {
-    if (dismissibleContainer.style.display === "block") {
-        dismissibleContainer.style.display = "none";
-        document.querySelector(".questions-subcontainer").style.height = "60px";
-    }
-    else {
-        dismissibleContainer.style.display = "block";
-        document.querySelector(".questions-subcontainer").style.height = "150px";
 
 
-    }
-}
-
-
-
-
-toggleQuestion = (icon, contents) => {
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector(icon).addEventListener('click', function() {
-            let content = document.querySelector(contents);
-            if (content.style.display === 'flex') {
-                content.style.display = 'none';
+document.addEventListener('DOMContentLoaded', function() {
+    const icons = document.querySelectorAll('.icon-1');
+    icons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            const paragraph = this.parentElement.nextElementSibling;
+            if (paragraph.style.display === 'block') {
+                paragraph.style.display = 'none';
+                this.classList.remove('fa-minus');
+                this.classList.add('fa-caret-down');
             } else {
-                content.style.display = 'flex';
-                content.style.alignItems = 'center';
-
+                paragraph.style.display = 'block';
+                this.classList.remove('fa-caret-down');
+                this.classList.add('fa-minus');
             }
         });
     });
-}
+});
 
-toggleQuestion('.icon-1', '.content-1');
-toggleQuestion('.icon-2', '.content-2');
-toggleQuestion('.icon-3', '.content-3');
 
+
+const navbar = document.querySelector('nav');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
     navbar.style.backgroundColor = "#002648";
