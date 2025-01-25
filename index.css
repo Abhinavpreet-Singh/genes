@@ -341,6 +341,59 @@ nav {
     font-size: 20px;
 }
 
+.info-container {
+    margin: 50px 0;
+    height: 600px;
+    width: 100vw;
+    background-image: url(images/DNA-pic.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-info {
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vw;
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+}
+
+.main-info-card {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.main-info-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.main-info-card hr {
+    width: 25%;
+    height: 3px;
+    background-color: white;
+}
+
+.main-info-card h3 {
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+.main-info-card p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
 .services-container {
     height: 800px;
     display: flex;
@@ -364,10 +417,103 @@ nav {
 
 .services-subcontainer {
     background: radial-gradient(ellipse at top center, #0E4F85, #000 45%);
-    height: 400px;
+    height: 600px;
     width: 80vw;
     border-radius: 30px;
     border: 2px solid gray;
+}
+
+.services-cards-cont {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.card img,
+.card i {
+    font-size: 50px;
+}
+
+.card h3 {
+    font-size: 35px;
+}
+
+.card p {
+    color: #acb0b4;
+}
+
+.analysis-container {
+    height: 700px;
+    width: 100vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, #041422 0%, #041422 40%, #072844 60%, #072844 100%);
+}
+
+.analysis-container h3 {
+    font-size: 50px;
+}
+
+.analysis-subcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.analysis-card {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+
+}
+
+.analysis-card img {
+    border-radius: 30px;
+    width: 320px;
+    height: 230px;
+}
+
+.analysis-card h4 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.analysis-card p {
+    font-size: 25px;
+    margin-top: 10px;
+    width: 27vw;
+    text-wrap: wrap;
+}
+
+.analysis-card button {
+    margin-top: 40px;
+    width: 150px;
+    height: 75px;
+    cursor: pointer;
+    background-color: #000;
+    color: #00ddff;
+    border-radius: 50%;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    
 }
 
 .meetOurTeam {
@@ -499,10 +645,6 @@ nav {
 .intro i {
     cursor: pointer;
     padding: 5px;
-
-    &:hover{
-        border: 1px solid gray;
-    }
 }
 
 .question {
@@ -550,6 +692,7 @@ nav {
     width: 60vw;
     border: 2px solid #fff;
     border-radius: 10px;
+    background-color: #062743;
     
 }
 
@@ -654,6 +797,8 @@ footer ul li {
     margin-left: 45px;
     flex-direction: column;
     padding-bottom: 45px;
+    position: relative;
+    left: 40px;
 }
 
 .social-media-icons {

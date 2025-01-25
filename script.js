@@ -1,40 +1,42 @@
 const navbar = document.querySelector('nav');
 
 const dismissible = document.querySelector('.fa-minus');
-const dismissibleContainer = document.querySelector(".questions-subcontainer");
-
-const ques1Btn = document.querySelector(".icon-1");
-const ques1Display = document.querySelector('.content-1');
-
-const ques2Btn = document.querySelector(".icon-2");
-const ques2Display = document.querySelector('.content-2');
-
-const ques3Btn = document.querySelector(".icon-3");
-const ques3Display = document.querySelector('.content-3');
+const dismissibleContainer = document.querySelector(".questions-subcontainer p");
 
 dismissible.onclick = () => {
-    dismissibleContainer.style.display = "none";
-}
+    if (dismissibleContainer.style.display === "block") {
+        dismissibleContainer.style.display = "none";
+        document.querySelector(".questions-subcontainer").style.height = "60px";
+    }
+    else {
+        dismissibleContainer.style.display = "block";
+        document.querySelector(".questions-subcontainer").style.height = "150px";
 
-let disp = "hide";
 
-Display = (quesBtn, quesDisplay) => {
-    quesBtn.onclick = () => {
-        if (disp==="hide") {
-            quesDisplay.style.display = "block";
-            quesDisplay.style.marginBottom = "40px";
-            disp = "visible";
-        }
-        else if (disp==="visible") {
-            quesDisplay.style.display = "none";
-            disp = "hide";
-        }
     }
 }
 
-Display(ques1Btn, ques1Display);
-Display(ques2Btn, ques2Display);
-Display(ques3Btn, ques3Display);
+
+
+
+toggleQuestion = (icon, contents) => {
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector(icon).addEventListener('click', function() {
+            let content = document.querySelector(contents);
+            if (content.style.display === 'flex') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'flex';
+                content.style.alignItems = 'center';
+
+            }
+        });
+    });
+}
+
+toggleQuestion('.icon-1', '.content-1');
+toggleQuestion('.icon-2', '.content-2');
+toggleQuestion('.icon-3', '.content-3');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
