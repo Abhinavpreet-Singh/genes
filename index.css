@@ -696,6 +696,37 @@ nav {
     
 }
 
+.last-section {
+    height: 500px;
+    width: 100vw;
+    background: url(images/dna-pic2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.sub-section {
+    width: 60vw;
+    height: 150px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sub-section h6 {
+    font-size: 40px;
+}
+
+.sub-section p {
+    font-size: 25px;
+}
+
 footer {
     background: radial-gradient(circle, #062743, #01060a);
     
