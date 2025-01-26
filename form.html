@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="form.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-    <title>GeneticX - Form</title>
+    <title>Form - GeneticX</title>
 </head>
 <body>
     <header>
@@ -19,10 +19,10 @@
             <div class="nav-links-container">
                 <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><i class='bx bx-user-circle'></i></li>
+                    <li><a href="index.html#services-container">Services</a></li>
+                    <li><a href="index.html#meetOurTeam">Team</a></li>
+                    <li><a href="index.html#questions-container">FAQs</a></li>
+                    <li><a href="#"><button id="register-btn">Register</button></a></li>
                 </ul>
             </div>
 
@@ -36,51 +36,32 @@
     
     <main>
         <section class="form-container">
-            <div class="steps-info">
-                <h1>Get Your Analysis</h1>
-
-                <div class="step step-1">
-                    <p>1. Upload your DNA FASTA file securely.</p>
-                </div>
-
-                <div class="step step-2">
-                    <p>2. Enter your name and email to recieve your report.</p>
-                </div>
-
-                <!-- <div class="step step-3">
-                    <p>3. Our AI processes your DNA and generates a detailed report covering 15+ characterstics like mutation types, genetic conditions, protein synthesis impact, inheritance patterns, and more.</p>
-                </div> -->
-            </div>
-
-            
-
             <form action="">
                 <label for="">Upload your DNA Sequence (in .fasta format)</label>
                 <label id="max-file-size">Maximum File Size: 50KB</label>
                 
                 <div class="input-div">
-                    <input class="input" name="file" type="file">
+                    <input class="input" name="file" type="file" id="file-input" accept=".fasta">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
                 </div>
 
+                <label id="name">Add your DNA Sequence here</label>
+                <input type="text" placeholder="Enter your DNA sequence here" id="seq-input">
+
                 <label id="name">Name</label>
-                <input type="text" placeholder="Enter your name here" id="name-input">
+                <input type="text" placeholder="Enter your name here" required id="name-input">
 
                 <label id="email">Email</label>
-                <input type="email" placeholder="Enter your email here" id="email-input">
+                <input type="email" placeholder="Enter your email here" required id="email-input">
 
                 <div class="checkbox-container">
-                <input type="checkbox" id="checkbox">
+                <input type="checkbox" required id="checkbox">
                 <label for="" id="agree-check">I agree to share my data for analysis.</label>
                 </div>
 
                 <button id="submit-btn">Submit</button>
             </form>
         </section>
-        <div class="step step-3">
-            <p>3. Our AI processes your DNA and generates a detailed report covering 15+ characterstics like mutation types, genetic conditions, protein synthesis impact, inheritance patterns, and more.</p>
-        </div>
-        <hr>
     </main>
     
     <script src="form.js"></script>

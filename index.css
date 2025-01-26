@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", serif;
 }
 
 html {
@@ -39,9 +40,13 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    font-size: 32px;
-    font-family: elephant;
-    cursor: pointer;
+}
+.logo span {
+    font-size: 60px;
+    
+    font-family: "Montez", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .logo-img {
@@ -333,12 +338,13 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: Arial, sans-serif;
 }
 
 .sub-section-content p {
     letter-spacing: .25px;
     font-size: 20px;
+    font-family: "Roboto", serif;
+    font-weight: normal;
 }
 
 .info-container {
@@ -391,7 +397,8 @@ nav {
 .main-info-card p {
     font-size: 20px;
     text-align: center;
-    font-weight: bold;
+    font-family: "poppins", serif;
+    font-weight: 400;
 }
 
 .services-container {
@@ -428,6 +435,10 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+
+.services-cards-cont p {
+    font-family: "Poppins", serif;
 }
 
 .card {
@@ -471,6 +482,7 @@ nav {
 .analysis-subcontainer {
     display: flex;
     justify-content: space-evenly;
+    width: 90vw;
     align-items: center;
 }
 
@@ -479,13 +491,13 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 25vw;
 
 }
 
 .analysis-card img {
     border-radius: 30px;
-    width: 320px;
+    width: 100%;
     height: 230px;
 }
 
@@ -498,7 +510,7 @@ nav {
 .analysis-card p {
     font-size: 25px;
     margin-top: 10px;
-    width: 27vw;
+    width: 25vw;
     text-wrap: wrap;
 }
 
@@ -510,9 +522,10 @@ nav {
     background-color: #000;
     color: #00ddff;
     border-radius: 50%;
-    font-size: 25px;
+    font-size: 30px;
     border: none;
     outline: none;
+    font-family: "Lancelot", serif;
     
 }
 
@@ -539,7 +552,7 @@ nav {
 }
 
 .team-info {
-    margin-top: 90px;
+    margin-top: 50px;
     height: 500px;
     width: 95vw;
     display: flex;
@@ -576,6 +589,7 @@ nav {
     margin-top: 7px;
     color: #acb0b4;
     font-size: 18px;
+    font-family: "Poppins", serif;
 }
 
 .team-media {
@@ -629,6 +643,8 @@ nav {
 .questions-subcontainer p {
     font-size: 20px;
     display: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .questions-container h3 p {
@@ -727,9 +743,9 @@ footer h6 {
     font-size: 30px;
     color: #fff;
     margin-bottom: 10px;
-    font-family: "Newsreader", serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
+    font-family: "Montez", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 footer p {

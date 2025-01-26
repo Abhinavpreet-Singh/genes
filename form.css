@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,36 +7,40 @@
 }
 
 html {
+    cursor: url('images/fav.png'), auto;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: "Arial", sans-serif;
-    background-color: black;
-    padding-top: 80px;
     overflow-x: hidden;
 }
 
 nav {
     margin-top: 0;
     width: 100vw;
-    background-color: #041422;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    background-color: #002648;
     opacity: 0.9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: absolute;
     top: 0;
+    /* z-index: 1; */
     color: white;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: 32px;
-    font-family: elephant;
+}
+.logo span {
+    font-size: 60px;
+    font-family: "Montez", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .logo-img {
@@ -51,25 +57,30 @@ nav {
     display: flex;
     width: 50vw;
     justify-content: end;
-    align-items: center;
-    padding-right: 20px;
 }
 
 .nav-links li {
     list-style: none;
 }
 
-.bx-user-circle {
-    color: aqua;
-    font-size: 45px;
-    cursor: pointer;
-}
-
 .nav-links li a {
-    margin: 0 40px;
+    margin: 0 20px;
     text-decoration: none;
     color: white;
     font-size: 20px;
+}
+
+#signin-btn, #register-btn {
+    width: 60px;
+    height: 27px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+#register-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .toggler {
@@ -117,68 +128,19 @@ nav {
 
 
 .form-container {
-    background: linear-gradient(to top, #000, #072844 100%, #072844);
-    height: 700px;
+    height: 100vh;
     width: 100vw;
     padding: 45px 90px;
     display: flex;
-    justify-content: space-between;
-}
-
-.steps-info {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    height: 500px;
-}
-
-.steps-info h1 {
-    color: #fff;
-    font-size: 50px;
-}
-
-.step {
-    margin-top: 45px;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 100px;
-    border: 1px solid #acb0b4;
-    border-radius: 30px;
-    background: linear-gradient(to left, #000, #000 90%, #2a2929);
-    padding-left: 20px;
+    background: linear-gradient(to top, #000, #072844 100%, #072844);
 }
 
-.step p {
-    color: #fff;
-    font-size: 20px;
-    letter-spacing: .25px;
-    color: #acb0b4;
-
-}
-
-.step-2 {
-    margin-top: 60px;
-    width: 600px;
-    background: linear-gradient(to left, #000, #000 90%, #2a2929);
-
-}
-
-.step-3 {
-    margin-left: 85px;
-    position: absolute;
-    bottom: 5%;
-    width: 85vw;
-    background: linear-gradient(to left, #000, #000 70%, #2a2929);
-}
-
-.step-3 p {
-    letter-spacing: 1px;
-}
 
 .form-container form {
     color: #fff;
-    height: 400px;
+    height: 450px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -187,10 +149,6 @@ nav {
     background: linear-gradient(to right, #062642, #000);
     border-radius: 30px;
 
-}
-
-form {
-    padding-left: 20px;
 }
 
 form label {
@@ -211,9 +169,11 @@ form label {
     margin-top: 30px;
 }
 
-#name-input, #email-input {
+#name-input,
+#email-input,
+#seq-input {
     width: 300px;
-    height: 27px;
+    height: 35px;
     padding-left: 10px;
     border: 2px solid #00DDFF;
     border-radius: 5px;
@@ -222,12 +182,16 @@ form label {
     background: linear-gradient(to left, #000, #072844);
 }
 
+#name {
+    margin-top: 20px;
+}
+
 /* From Uiverse.io by akshat-patel28 */ 
 .input-div {
     margin-top: 20px;
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 75px;
     border-radius: 50%;
     border: 2px solid rgb(1, 235, 252);
     display: flex;
@@ -237,7 +201,7 @@ form label {
     box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
     animation: flicker 2s linear infinite;
   }
-  
+
   .icon {
     color: rgb(1, 235, 252);
     font-size: 1.5rem;
@@ -340,5 +304,6 @@ form label {
     outline: none;
     border: none;
     background-color: #00DDFF;
+    cursor: pointer;
     width: 80px;
 }
